@@ -1,0 +1,2 @@
+,TradingDate,CurrencyRate,BaseCurrency,TargetCurrency,Filename,LoadDate
+27,2024-04-05,1.09443405,AUD,NZD,../data/raw/xrates_aud_nzd_20240309_20240408_20240408020755.json,2024-04-08 02:07:55

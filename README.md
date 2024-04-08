@@ -1,24 +1,15 @@
-# ExchangeRatesAnalysis
- 
-Challenge:
-•	Connect to any exchange rates API (Sample - Exchange Rates API) to get exchange rates of Australia to New Zealand for the past 30 days into json output format
-•	Pre process the data to manage any expected issues
-•	Perform some data analysis
-o	Find the best and worst exchange rates for that time period
-o	Calculate the average exchange rate for the month
+## Steps to setup this project
+cd .\exchange_rate_analysis\
+python -m venv xrates_venv
+pip install -r requirements.txt
 
-Important Code Snippets:
-API Used: 
-url = "https://api.currencybeacon.com/v1/timeseries?"
-exchange_rates_analysis_before_final.py
-xrates_analysis.sql
+## Executing this project
+.\xrates_venv\Scripts\Activate.ps1
+cd .\source\
+python .\exchange_rates_analysis.py 
+Deactivate
 
-Sample code snippets to download the JSON file using an API are provided. I tired to use the Python, DataFrames, DuckDB to process the required ExchangeRates info.
+## Output of this execution will print the below aggregated summary, and generates a line graph file into .\graphs\ directory as shown below
+![screenshot](.\Result_Summary.png)
 
-Possible test cases are provided on a high level in a excel file.
-
-Analysed output:
-The output gives the Maximum Currency Rate, Maximum Currency Trading Date,  Minimum Currency Rate, Minimum Currency Trading Date, Average Currency Rate, Percentage changed based on the MINIMUM Currency rate.
-
-[('BaseCurrency', 'TargetCurrency', 'MaxCurrRate', 'MaxTradeDate', 'MinCurrRate', 'MinTradeDate', 'AvgCurrRate', 'PercentageCurrRate'),
- ('AUD', 'NZD', '1.09443405', '2024-04-05 00:00:00', '1.07123743', '2024-03-10 00:00:00', '1.0844122506451614', '3.2556183474084137')]
+![screenshot](.\xrates_aud_nzd_20240109_20240408_20240408230355.png)
